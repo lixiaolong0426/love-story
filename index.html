@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Photos</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<link href="#" rel="shortcut icon" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1086271_84fdhn8j8a5.css">
+	<link rel="stylesheet" href="css/bgstyle.css">
+	<script src="js/cord.js"></script>
+</head>
+
+<body>
+	<audio controls autoplay>
+		<source src="mp3/zzsc.mp3"></audio>
+
+
+	<!-- 背景动画 -->
+	<div id="midground" class="wall"></div>
+	<div id="foreground" class="wall"></div>
+	<div id="top" class="wall"></div>
+
+
+	<!-- 绳子文字 -->
+	<canvas id="canvas" width="900px" height="270px"></canvas>
+
+	<!-- 导航 -->
+	<div class="nav">
+		<div class="logo">
+		</div>
+		<div class="main-menu">
+			<ul>
+				<li>
+					<a href="html/message.html" class="people">
+						<i></i>
+						<span>MESSAGE</span>
+					</a>
+				</li>
+				<li>
+					<a href="#" class="pictures">
+						<i></i>
+						<span>PHOTOS</span>
+					</a>
+
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+	<!-- 照片墙 -->
+	<div class="photos">
+		<div class="container">
+			<ul id="hexGrid">
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph1.jpg" alt="1" />
+						<h1>初识</h1>
+						<p>这是我们故事的开端，我永远不会忘记，而且我希望这个故事不会结束。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph2.jpg" alt="2" />
+						<h1>想念</h1>
+						<p>当清晨第一缕阳光醒来时，我在想你，当夜晚第一个梦降临时，我还在想你!</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph3.jpg" alt="3" />
+						<h1>想念</h1>
+						<p>有一种感觉，它没有开端也没有结果，但它却时时刻刻占据我，那就是想你的感觉。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph4.jpg" alt="4" />
+						<h1>想念</h1>
+						<p>想你，在梦中的每时每刻，在醒时的每分每秒。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="https://index.ccqe.top/">
+						<img src="images/ph5.jpg" alt="5" />
+						<h1>想念</h1>
+						<p>我能想到最幸福的事就是我在想你的时候你也在想我！</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph6.jpg" alt="6" />
+						<h1>想念</h1>
+						<p>晓看天色暮看云，行也思君，坐也思君!</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph7.jpg" alt="7" />
+						<h1>想念</h1>
+						<p>灼灼桃花，三千繁华，却似人间只有一个你。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph8.jpg" alt="8" />
+						<h1>想念</h1>
+						<p>幸有所爱，无惧山海。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph9.jpg" alt="9" />
+						<h1>想念</h1>
+						<p>山有木兮卿有意 昨夜星辰恰似你。</p>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<div id="newpost" style="display:none; " class="container">
+			<ul id="hexGrid">
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph10.jpg" alt="10" />
+						<h1>喜欢</h1>
+						<p>喜欢是一种特别的幸福，如果非要问原因：<br>“因为是你，因为是我。”</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph11.jpg" alt="11" />
+						<h1>想念</h1>
+						<p>我想种下一缕思念，然后思念长成树，开满花，花随着风，飘向最美的你，你闻着花香，我想着你，如此，甚好。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph12.jpg" alt="12" />
+						<h1>想念</h1>
+						<p>我常常拨通了电话却不知道该说什么好，只是因为想听听那熟悉的声音，而且真正拨通的其实是我心底的弦。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph13.jpg" alt="13" />
+						<h1>想念</h1>
+						<p>躲在某一时间，想念一段过往的故事；躲在某一地点，想念一个让我牵挂的人。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph14.jpg" alt="14" />
+						<h1>想念</h1>
+						<p>喜欢你很甜蜜，很舒服，很开心，很愉快，很幸福！</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph15.jpg" alt="15" />
+						<h1>想念</h1>
+						<p>浮世三千，吾爱有三，日、月与卿，日为朝，月为暮，卿为朝朝暮暮。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph16.jpg" alt="16" />
+						<h1>想念</h1>
+						<p>我想将对你的思念，寄予散落的星辰，愿星光照进你的窗前，伴你好眠。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph17.jpg" alt="17" />
+						<h1>想念</h1>
+						<p>我想让你知道，我喜欢这世界，因为这个世界有你，我更想让世界知道我喜欢你。</p>
+					</a>
+				</li>
+				<li class="hex">
+					<a class="hexIn" href="#">
+						<img src="images/ph18.jpg" alt="18" />
+						<h1>想念</h1>
+						<p>好想好想和你在一起，和你一起看日出日落，和你一起看天上的星星，和你一起收集所有的浪漫气息！</p>
+					</a>
+				</li>
+
+			</ul>
+
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="templatemo_loadmore">
+					<button class="gallery_more" id="button" onClick="showhide()">还没看够？</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script>
+		function showhide() {
+			var div = document.getElementById("newpost");
+			if (div.style.display !== "none") {
+				div.style.display = "none";
+			} else {
+				div.style.display = "block";
+			}
+		}
+		$('.gallery_more').click(function () {
+			$("#button").toggleClass('gallery_more');
+			if ($("#button").hasClass('gallery_more')) {
+				$("#button").text('还没看够？');
+			} else {
+				$("#button").text('永永远远都看不够！');
+			}
+		});
+	</script>
+
+	<script>
+		"use strict";
+		var scene = new Scene(document.querySelector('#canvas'));
+		scene.run();
+		var phrase = ' I LOVE YOU ';
+		var r = new Rope({
+			x: scene.canvas.width * 0.15,
+			y: 40,
+			length: scene.canvas.width * 0.7,
+			points: phrase.length,
+			vertical: false,
+			dangleEnd: false,
+			fixedEnds: true,
+			stiffness: 1.5,
+			constrain: false,
+			gravity: 0.1
+		});
+		var center = r.nodes.length / 2;
+		var ropes = r.nodes.map(function (n, i) {
+			n.set(n.x, 60 + 80 * (1 - Math.abs((center - i) % center / center)));
+			if (phrase[i] !== ' ') {
+				return new Rope({
+					startNode: n,
+					x: n.x,
+					y: n.y,
+					length: 60,
+					points: 4,
+					letter: phrase[i],
+					vertical: true,
+					stiffness: 1,
+					constrain: false,
+					gravity: 0.5
+				});
+			}
+		});
+		var first = r.nodes[0];
+		var last = r.nodes[r.nodes.length - 1];
+		first.set(2, -2);
+		last.set(scene.canvas.width - 2, -2);
+		r.makeConstraints();
+		ropes = ropes;
+		scene.addRope(r);
+		ropes.filter(function (r) {
+			return r;
+		}).forEach(function (r) {
+			r.makeConstraints();
+			scene.addRope(r);
+		});
+	</script>
+</body>
+
+</html>
